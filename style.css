@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #64C6F6; 
+    margin: 0;
+    overflow: hidden; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.container {
+    width: 90%; 
+    max-width: 500px; 
+    background-color: white;
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    height: 100%; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-around; 
+    gap: 20px; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px; 
+    font-size: 48px; 
+    font-weight: 400; 
+}
+
+.input-group {
+    position: relative;
+    width: 100%; 
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    color: #777;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    font-size: 32px; 
+    font-weight: 400; 
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none; 
+    border-bottom: 1px solid #ccc; 
+    border-radius: 0; 
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+    font-size: 24px; 
+    font-weight: 300; /* Light */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-bottom-color: #64C6F6; 
+}
+
+.input-group input:focus ~ label {
+    opacity: 0; 
+    top: 10px;  
+    font-size: 12px; 
+    color: #007bff; 
+    font-weight: 400; 
+}
+
+.register {
+    text-align: right; 
+    margin-bottom: 5px; 
+    font-size: 24px; 
+    color: #64C6F6;
+    width: 100%; 
+    font-weight: 400; 
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px; 
+    background-color: #2ea9e7;
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 32px; 
+    margin-bottom: 20px; 
+    font-weight: 700; 
+}
+
+.btn:hover {
+    background-color: #64C6F6; 
+}
+
+/*  Дополнительные стили для  `.input-group` */
+.input-group {
+    margin-bottom: 5px; 
+}
+
+/*  Стили для блока с полем ввода и меткой */
+.input-group {
+    margin-bottom: 5px; 
+}
+
+/* Адаптация для боковых полос с помощью Clamp */
+body {
+    background-color: #64C6F6; 
+    padding: 0 clamp(10px, 2vw, 50px); 
+}
+
+/*  Адаптация  содержимого  `.container`  с  помощью  `clamp` */
+.container > * { 
+    margin-top: clamp(0px, 2vw, 20px); 
+}
